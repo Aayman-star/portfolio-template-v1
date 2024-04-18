@@ -37,7 +37,7 @@ const Header = () => {
                 onClick={() => setNavBar(!navBar)}
                 className="text-slate-50 text-2xl font-bold absolute top-5 right-5"
               />
-              <ul className="h-screen  p-2 flex flex-col items-center space-y-6  mt-24">
+              <ul className="h-screen  p-2 flex flex-col items-center space-y-6  mt-28">
                 {navLinks.map((link, index) => (
                   <li key={index} className="hover:scale-105 hover:underline">
                     {link}
