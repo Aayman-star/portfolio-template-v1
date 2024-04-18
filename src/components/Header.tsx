@@ -38,7 +38,7 @@ const Header = () => {
               />
               <ul className="bg-green-500  h-screen  p-2 flex flex-col items-center space-y-6  mt-24">
                 {navLinks.map((link, index) => (
-                  <li className="hover:scale-105">{link}</li>
+                  <li className="hover:scale-105 hover:underline">{link}</li>
                 ))}
               </ul>
             </div>
