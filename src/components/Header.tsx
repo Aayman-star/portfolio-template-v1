@@ -1,7 +1,10 @@
 "use client";
 import { Menu, X, SunMedium, MoonStar } from "lucide-react";
+import { useTheme } from "next-themes";
+
 import { useState } from "react";
 const Header = () => {
+  const { setTheme } = useTheme();
   const [darkMode, setDarkMode] = useState(false);
   const [navBar, setNavBar] = useState(false);
   const navLinks = [
@@ -11,31 +14,36 @@ const Header = () => {
     "Achievements",
     "Skills",
   ];
+  const handleTheme = () => {
+    setDarkMode(!darkMode);
+    setTheme(darkMode ? "light" : "dark");
+  };
   return (
-    <div className="w-full p-4 border-b-2 border-slate-50">
+    <div className="bg-background w-full p-4 ">
       <div className="flex items-center justify-between">
-        <h1 className={`text-xl font-semibold `}>Kanza Khalid</h1>
+        <h1 className={`text-xl font-bold text-primary`}>Kanza Khalid</h1>
         <div className="flex items-center gap-2">
           {darkMode ? (
-            <MoonStar
-              onClick={() => setDarkMode(false)}
-              className={`text-slate-50 text-2xl font-bold ${
+            <SunMedium
+              onClick={handleTheme}
+              className={`text-foreground text-2xl font-bold ${
                 navBar ? "hidden" : "block"
               }`}
             />
           ) : (
-            <SunMedium
-              onClick={() => setDarkMode(true)}
-              className={`text-slate-50 text-2xl font-bold ${
+            <MoonStar
+              onClick={handleTheme}
+              className={`text-foreground text-2xl font-bold ${
                 navBar ? "hidden" : "block"
               }`}
             />
           )}
+
           {navBar ? (
             <div className="fixed left-0 top-0 w-[100%]   h-screen z-10 ">
               <X
                 onClick={() => setNavBar(!navBar)}
-                className="text-slate-50 text-2xl font-bold absolute top-5 right-5"
+                className="text-foreground text-2xl font-bold absolute top-5 right-5"
               />
               <ul className="h-screen  p-2 flex flex-col items-center space-y-6  mt-28">
                 {navLinks.map((link, index) => (
@@ -48,7 +56,7 @@ const Header = () => {
           ) : (
             <Menu
               onClick={() => setNavBar(!navBar)}
-              className="text-slate-50 text-2xl font-bold"
+              className="text-foreground text-2xl font-bold"
             />
           )}
         </div>
