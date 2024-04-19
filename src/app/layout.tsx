@@ -3,13 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
-
-const inter = Inter({ subsets: ["latin"] });
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-});
+import { inter } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Dr.Kanza Khalid",

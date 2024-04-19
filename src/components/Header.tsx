@@ -17,7 +17,7 @@ const Header = () => {
   ];
 
   return (
-    <nav className="bg-background w-full p-4 z-10 sticky">
+    <nav className="bg-background w-full p-4 z-10 sticky md:max-w-7xl mx-auto">
       <div className="flex items-center justify-between">
         <h1
           className={`text-2xl font-extrabold text-primary ${
