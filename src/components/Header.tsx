@@ -40,9 +40,10 @@ const Header = () => {
                 onClick={() => setNavBar(!navBar)}
                 className="text-foreground text-2xl font-bold absolute top-5 right-5"
               />
+
               <ul className="w-full h-screen  z-10 overflow-x-hidden  p-2 flex flex-col items-center space-y-6  mt-28">
                 {navLinks.map((link, index) => (
-                  <Link href="#">
+                  <Link href="#" key={index}>
                     <li
                       key={index}
                       className="hover:scale-110 hover:underline hover:text-primary">
