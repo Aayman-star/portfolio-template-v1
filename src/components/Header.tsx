@@ -87,7 +87,7 @@ const Header = () => {
                 className={`${
                   theme == "light" ? "text-gray-500" : "text-gray-300"
                 }`}>
-                <a href={`#${link}`}>
+                <a href={`#${link}`} key={index}>
                   {" "}
                   <li className="m-2 text-base" key={index}>
                     {link}
