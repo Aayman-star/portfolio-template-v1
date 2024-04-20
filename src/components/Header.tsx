@@ -83,6 +83,7 @@ const Header = () => {
           <ul className="flex items-center justify-between">
             {navLinks.map((link, index) => (
               <Button
+                key={index}
                 variant="link"
                 className={`${
                   theme == "light" ? "text-gray-500" : "text-gray-300"
