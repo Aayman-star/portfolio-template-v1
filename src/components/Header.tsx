@@ -17,7 +17,7 @@ const Header = () => {
   ];
 
   return (
-    <nav className="bg-background w-full p-4 z-10 sticky md:max-w-7xl mx-auto md:p-8">
+    <nav className="backdrop-blur  w-full p-4 z-20  md:max-w-7xl md:mx-auto md:fixed top-0 left-[100px] md:p-6">
       <div className="flex items-center justify-between">
         <h1
           className={`text-2xl font-extrabold text-primary ${
@@ -31,15 +31,22 @@ const Header = () => {
             variant="ghost"
             size="sm"
             className={`${navBar ? "hidden" : "block"}`}>
-            {theme === "dark" ? <SunMedium /> : <MoonStar />}
+            {theme === "dark" ? (
+              <SunMedium className="text-slate-200" />
+            ) : (
+              <MoonStar className="text-slate-500" />
+            )}
           </Button>
 
           {navBar ? (
             <div className="fixed left-0 top-0  w-[100%]  min-h-screen bg-background">
-              <X
-                onClick={() => setNavBar(!navBar)}
-                className="text-foreground text-2xl font-bold absolute top-5 right-5"
-              />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setNavBar(!navBar)}>
+                {" "}
+                <X className="text-foreground text-2xl font-bold absolute top-5 right-5" />
+              </Button>
 
               <ul className="w-full h-screen  z-10 overflow-x-hidden  p-2 flex flex-col items-center space-y-6  mt-28">
                 {navLinks.map((link, index) => (
@@ -54,10 +61,16 @@ const Header = () => {
               </ul>
             </div>
           ) : (
-            <Menu
-              onClick={() => setNavBar(!navBar)}
-              className="text-foreground text-2xl font-bold"
-            />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setNavBar(!navBar)}>
+              <Menu
+                className={`${
+                  theme == "dark" ? "text-slate-200" : "text-slate-500"
+                } text-2xl font-bold`}
+              />
+            </Button>
           )}
         </div>
       </div>

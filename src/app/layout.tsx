@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { inter } from "@/lib/fonts";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           disableTransitionOnChange>
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
