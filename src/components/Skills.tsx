@@ -5,7 +5,9 @@ import { skills } from "@/lib/content";
 import { poppins } from "@/lib/fonts";
 const Skills = () => {
   return (
-    <div className="w-full min-h-screen p-2 flex flex-col md:max-w-7xl mx-auto md:flex-row items-center justify between">
+    <div
+      id="Skills"
+      className="w-full min-h-screen p-2 flex flex-col-reverse md:max-w-7xl mx-auto md:flex-row items-center justify between">
       {/* div for the text */}
       <div className="w-full p-2 md:w-1/2">
         <Card>

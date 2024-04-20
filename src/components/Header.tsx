@@ -19,12 +19,12 @@ const Header = () => {
   return (
     <nav className="backdrop-blur  w-full p-4 z-20  md:max-w-7xl md:mx-auto md:fixed top-0 left-[100px] md:p-6">
       <div className="flex items-center justify-between">
-        <h1
-          className={`text-2xl font-extrabold text-primary ${
+        <h4
+          className={`text-3xl font-extrabold text-primary ${
             navBar && "z-10"
           }`}>
           Kanza Khalid
-        </h1>
+        </h4>
         <div className={`flex items-center justify-between`}>
           <Button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -50,7 +50,7 @@ const Header = () => {
 
               <ul className="w-full h-screen  z-10 overflow-x-hidden  p-2 flex flex-col items-center space-y-6  mt-28">
                 {navLinks.map((link, index) => (
-                  <Link href="#" key={index}>
+                  <Link href="/" key={index}>
                     <li
                       key={index}
                       className="hover:scale-110 hover:underline hover:text-primary">
