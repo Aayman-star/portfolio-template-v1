@@ -5,7 +5,9 @@ import { experience } from "@/lib/content";
 import { poppins } from "@/lib/fonts";
 const Experience = () => {
   return (
-    <div className="w-full min-h-screen p-2 flex flex-col md:max-w-7xl mx-auto md:flex-row items-center justify between">
+    <div
+      id="Experience"
+      className="w-full min-h-screen p-2 flex flex-col md:max-w-7xl mx-auto md:flex-row items-center justify between">
       {/* div for the image */}
       <div className="w-full md:w-1/2 mx-auto">
         <Image

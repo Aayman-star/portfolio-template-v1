@@ -17,15 +17,19 @@ const Header = () => {
   ];
 
   return (
-    <nav className="backdrop-blur  w-full p-4 z-20  md:max-w-7xl md:mx-auto md:fixed top-0 left-[100px] md:p-6">
+    <nav className="backdrop-blur  w-full p-4 z-20  md:max-w-7xl md:mx-auto md:fixed top-0 left-[100px] border-b-[1px] md:p-6">
       <div className="flex items-center justify-between">
-        <h4
-          className={`text-3xl font-extrabold text-primary ${
-            navBar && "z-10"
-          }`}>
-          Kanza Khalid
-        </h4>
-        <div className={`flex items-center justify-between`}>
+        <Link href={"/"} className={`${navBar && "z-10"}`}>
+          <h4
+            className={`text-3xl font-extrabold text-primary ${
+              navBar && "z-10"
+            }`}>
+            Kanza Khalid
+          </h4>
+        </Link>
+
+        {/* menu for mobile */}
+        <div className={`flex items-center justify-between md:hidden`}>
           <Button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             variant="ghost"
@@ -50,13 +54,14 @@ const Header = () => {
 
               <ul className="w-full h-screen  z-10 overflow-x-hidden  p-2 flex flex-col items-center space-y-6  mt-28">
                 {navLinks.map((link, index) => (
-                  <Link href="/" key={index}>
-                    <li
-                      key={index}
-                      className="hover:scale-110 hover:underline hover:text-primary">
+                  <a
+                    href={`#${link}`}
+                    key={index}
+                    className="hover:scale-110 hover:underline hover:text-primary">
+                    <li key={index} onClick={() => setNavBar(!navBar)}>
                       {link.toUpperCase()}
                     </li>
-                  </Link>
+                  </a>
                 ))}
               </ul>
             </div>
@@ -72,6 +77,36 @@ const Header = () => {
               />
             </Button>
           )}
+        </div>
+        {/* Menu for medium screen and up */}
+        <div className="hidden md:flex items-center justify-between">
+          <ul className="flex items-center justify-between">
+            {navLinks.map((link, index) => (
+              <Button
+                variant="link"
+                className={`${
+                  theme == "light" ? "text-gray-500" : "text-gray-300"
+                }`}>
+                <a href={`#${link}`}>
+                  {" "}
+                  <li className="m-2 text-base" key={index}>
+                    {link}
+                  </li>
+                </a>
+              </Button>
+            ))}
+          </ul>
+          <Button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            variant="ghost"
+            size="sm"
+            className={`${navBar ? "hidden" : "block"}`}>
+            {theme === "dark" ? (
+              <SunMedium className="text-slate-200" />
+            ) : (
+              <MoonStar className="text-slate-500" />
+            )}
+          </Button>
         </div>
       </div>
     </nav>

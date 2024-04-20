@@ -6,7 +6,9 @@ import { poppins } from "@/lib/fonts";
 import { qualification } from "@/lib/content";
 const Qualification = () => {
   return (
-    <div className="w-full min-h-screen p-2 flex flex-col-reverse md:max-w-7xl mx-auto md:flex-row items-center justify between">
+    <div
+      id="Qualification"
+      className="w-full min-h-screen p-2 flex flex-col-reverse md:max-w-7xl mx-auto md:flex-row items-center justify between">
       {/* div for the text */}
       <div className="w-full p-2 md:w-1/2">
         <Card>

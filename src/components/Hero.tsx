@@ -9,7 +9,8 @@ const Hero = () => {
   const { theme, setTheme } = useTheme();
   return (
     <div
-      className={`w-full min-h-screen p-2 flex flex-col items-center md:max-w-7xl mx-auto md:flex-row md:items-center justify-between`}>
+      id="Home"
+      className={`w-full min-h-screen p-2 flex flex-col items-center justify-between md:max-w-7xl mx-auto md:flex-row md:items-center md:justify-between`}>
       {/* This div is for image */}
       <div className="w-full md:w-1/2">
         <Image

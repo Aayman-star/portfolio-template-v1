@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <div
       id="Skills"
-      className="w-full min-h-screen p-2 flex flex-col-reverse md:max-w-7xl mx-auto md:flex-row items-center justify between">
+      className="w-full min-h-screen p-2 flex flex-col-reverse items-center  md:max-w-7xl mx-auto md:flex-row md:items-center md:justify between">
       {/* div for the text */}
       <div className="w-full p-2 md:w-1/2">
         <Card>
@@ -32,7 +32,7 @@ const Skills = () => {
       {/* div for the image */}
       <div className="w-full md:w-1/2 mx-auto">
         <Image
-          className="mx-auto md:hidden"
+          className="mx-auto mb-10 md:hidden"
           src={img3}
           alt="Experience"
           width={200}
