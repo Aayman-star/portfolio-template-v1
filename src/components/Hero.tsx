@@ -21,7 +21,7 @@ const Hero = () => {
           height={325}
         />
       </div>
-      <div className="w-full md:w-1/2 md:-mt-10">
+      <div className="w-full p-4 md:w-1/2 md:-mt-10">
         <h1 className="font-bold text-4xl md:text-6xl text-primary">
           Dr.Kanza Khalid
           <span
