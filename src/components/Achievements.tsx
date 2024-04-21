@@ -7,9 +7,9 @@ const Achievements = () => {
   return (
     <div
       id="Achievements"
-      className="w-full min-h-screen p-2 flex flex-col md:max-w-7xl mx-auto md:flex-row items-center justify between">
+      className="w-full min-h-screen p-4 flex flex-col items-center gap-y-4 md:max-w-7xl mx-auto  md:flex-row md:items-center justify between">
       {/* div for the image */}
-      <div className="w-full md:w-1/2 mx-auto">
+      <div className="w-full md:basis-2/5 mx-auto">
         <Image
           className="mx-auto md:hidden"
           src={img2}
@@ -26,7 +26,7 @@ const Achievements = () => {
         />
       </div>
       {/* div for the text */}
-      <div className="w-full p-2 md:w-1/2">
+      <div className="w-full p-2 md:basis-3/5">
         <Card>
           <CardHeader>
             {" "}
@@ -37,11 +37,14 @@ const Achievements = () => {
 
           <CardContent>
             {achievements.map((item, i) => (
-              <div className="p-2" key={i}>
-                <p className={`${poppins.className} text-base font-extralight`}>
-                  {item.title}
-                </p>
-              </div>
+              <ul className="p-2 list-disc list-inside" key={i}>
+                <li className={`${poppins.className} text-primary`}>
+                  <span className=" text-base font-extralight text-foreground">
+                    {" "}
+                    {item.title}
+                  </span>
+                </li>
+              </ul>
             ))}
           </CardContent>
         </Card>

@@ -17,7 +17,7 @@ const Header = () => {
   ];
 
   return (
-    <nav className="backdrop-blur  w-full p-4 z-20  md:max-w-7xl md:mx-auto md:fixed top-0 left-[100px] border-b-[1px] md:p-6">
+    <nav className="backdrop-blur    w-full p-4 z-20  md:max-w-7xl md:mx-auto md:fixed top-0 left-[100px] border-b-[1px] md:p-6">
       <div className="flex items-center justify-between">
         <Link href={"/"} className={`${navBar && "z-10"}`}>
           <h4
@@ -72,7 +72,7 @@ const Header = () => {
               onClick={() => setNavBar(!navBar)}>
               <Menu
                 className={`${
-                  theme == "dark" ? "text-slate-200" : "text-slate-500"
+                  theme == "dark" ? "text-slate-200" : "text-slate-700"
                 } text-2xl font-bold`}
               />
             </Button>
@@ -90,7 +90,7 @@ const Header = () => {
                 }`}>
                 <a href={`#${link}`} key={index}>
                   {" "}
-                  <li className="m-2 text-base" key={index}>
+                  <li className="m-2 text-base z-10" key={index}>
                     {link}
                   </li>
                 </a>

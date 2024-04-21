@@ -1,3 +1,7 @@
+export const Title = "Dr.Kanza Khalid";
+export const Subtitle = "FCPS Cardiology";
+export const AboutText = `Medical Professional dedicated to providing better care to my patients
+          and passionate about improving the health care facilities in Pakistan.`;
 export const experience = [
   {
     institute: "PIC,Lahore",

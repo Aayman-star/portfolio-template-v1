@@ -8,9 +8,9 @@ const Qualification = () => {
   return (
     <div
       id="Qualification"
-      className="w-full min-h-screen p-2 flex flex-col-reverse md:max-w-7xl mx-auto md:flex-row items-center justify between">
+      className="w-full min-h-screen p-4 flex flex-col-reverse items-center gap-y-4 md:max-w-7xl mx-auto md:flex-row md:items-center justify between">
       {/* div for the text */}
-      <div className="w-full p-2 md:w-1/2">
+      <div className="w-full p-2 md:basis-3/5">
         <Card>
           <CardHeader>
             {" "}
@@ -39,7 +39,7 @@ const Qualification = () => {
         </Card>
       </div>
       {/* div for the image */}
-      <div className="w-full md:w-1/2 mx-auto">
+      <div className="w-full  md:basis-2/5 mx-auto">
         <Image
           className="mx-auto md:hidden"
           src={img1}

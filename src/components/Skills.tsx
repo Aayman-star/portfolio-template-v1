@@ -7,9 +7,9 @@ const Skills = () => {
   return (
     <div
       id="Skills"
-      className="w-full min-h-screen p-2 flex flex-col-reverse items-center  md:max-w-7xl mx-auto md:flex-row md:items-center md:justify between">
+      className="w-full min-h-screen -mt-[125px] flex flex-col-reverse items-center gap-y-6 mb-10  md:max-w-7xl mx-auto   md:flex-row md:items-center md:justify between md:mb-0">
       {/* div for the text */}
-      <div className="w-full p-2 md:w-1/2">
+      <div className="w-full  p-2 md:basis-3/5">
         <Card>
           <CardHeader>
             {" "}
@@ -20,19 +20,22 @@ const Skills = () => {
 
           <CardContent>
             {skills.map((skill, i) => (
-              <div className="p-2" key={i}>
-                <p className={`${poppins.className} text-base font-extralight`}>
-                  {skill.title}
-                </p>
-              </div>
+              <ul className="p-2 list-inside list-disc" key={i}>
+                <li className={`${poppins.className} text-primary`}>
+                  <span className="text-base font-extralight text-foreground">
+                    {" "}
+                    {skill.title}
+                  </span>
+                </li>
+              </ul>
             ))}
           </CardContent>
         </Card>
       </div>
       {/* div for the image */}
-      <div className="w-full md:w-1/2 mx-auto">
+      <div className="w-full  md:basis-2/5 mx-auto">
         <Image
-          className="mx-auto mb-10 md:hidden"
+          className="mx-auto md:hidden"
           src={img3}
           alt="Experience"
           width={200}
