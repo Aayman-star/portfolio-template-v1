@@ -79,7 +79,7 @@ const Header = () => {
           )}
         </div>
         {/* Menu for medium screen and up */}
-        <div className="hidden md:flex items-center justify-between">
+        <div className="hidden md:z-10 md:flex items-center justify-between">
           <ul className="flex items-center justify-between">
             {navLinks.map((link, index) => (
               <Button
