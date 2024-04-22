@@ -6,60 +6,69 @@ import { experience } from "@/lib/content";
 import { poppins } from "@/lib/fonts";
 import { qualification } from "@/lib/content";
 import Animation from "./Animation";
+import { useInView } from "react-intersection-observer";
+import { inView, motion } from "framer-motion";
 const Qualification = () => {
+  const [ref, inView] = useInView({ threshold: 0.5 });
   return (
-    <Animation>
-      <div
-        id="Qualification"
-        className="w-full min-h-screen p-4 flex flex-col-reverse items-center gap-y-4 md:max-w-7xl mx-auto md:flex-row md:items-center justify between">
-        {/* div for the text */}
-        <div className="w-full p-2 md:basis-3/5">
-          <Card>
-            <CardHeader>
-              {" "}
-              <CardTitle className="border-b-[1px] p-2 text-primary">
-                Qualification
-              </CardTitle>
-            </CardHeader>
+    <motion.div
+      ref={ref}
+      id="Qualification"
+      className="w-full min-h-screen p-4 flex flex-col-reverse items-center gap-y-4 md:max-w-7xl mx-auto md:flex-row md:items-center justify between"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        ease: "easeIn",
+        duration: 1,
+        delay: 0.5,
+      }}>
+      {/* div for the text */}
+      <div className="w-full p-2 md:basis-3/5">
+        <Card>
+          <CardHeader>
+            {" "}
+            <CardTitle className="border-b-[1px] p-2 text-primary">
+              Qualification
+            </CardTitle>
+          </CardHeader>
 
-            <CardContent>
-              {qualification.map((item, i) => (
-                <div className="p-2" key={i}>
-                  <h3 className="font-semibold text-xl">
-                    {item.institute}--
-                    <span
-                      className={`${poppins.className} text-base italic font-extralight`}>
-                      {item.degree}
-                    </span>
-                  </h3>
-                  <p
+          <CardContent>
+            {qualification.map((item, i) => (
+              <div className="p-2" key={i}>
+                <h3 className="font-semibold text-xl">
+                  {item.institute}--
+                  <span
                     className={`${poppins.className} text-base italic font-extralight`}>
-                    {item.duration}
-                  </p>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        </div>
-        {/* div for the image */}
-        <div className="w-full  md:basis-2/5 mx-auto">
-          <Image
-            className="mx-auto md:hidden"
-            src={img1}
-            alt="Experience"
-            width={200}
-            height={200}
-          />
-          <Image
-            className="mx-auto hidden md:block"
-            src={img1}
-            alt="Experience"
-            width={300}
-            height={300}
-          />
-        </div>
+                    {item.degree}
+                  </span>
+                </h3>
+                <p
+                  className={`${poppins.className} text-base italic font-extralight`}>
+                  {item.duration}
+                </p>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
       </div>
-    </Animation>
+      {/* div for the image */}
+      <div className="w-full  md:basis-2/5 mx-auto">
+        <Image
+          className="mx-auto md:hidden"
+          src={img1}
+          alt="Experience"
+          width={200}
+          height={200}
+        />
+        <Image
+          className="mx-auto hidden md:block"
+          src={img1}
+          alt="Experience"
+          width={300}
+          height={300}
+        />
+      </div>
+    </motion.div>
   );
 };
 

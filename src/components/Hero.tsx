@@ -9,6 +9,7 @@ import { Title, Subtitle, AboutText } from "@/lib/content";
 import { TypeAnimation } from "react-type-animation";
 import { motion, MotionConfig } from "framer-motion";
 import Animation from "./Animation";
+
 const Hero = () => {
   const { theme, setTheme } = useTheme();
   return (
@@ -17,6 +18,7 @@ const Hero = () => {
         id="Home"
         className={`w-full min-h-screen   flex flex-col items-center justify-center md:max-w-7xl mx-auto md:flex-row md:items-center md:justify-between`}>
         {/* This div is for image */}
+
         <div className="w-full basis-1/2  md:basis-1/2">
           <Image
             className="mx-auto rounded-full shadow-2xl"

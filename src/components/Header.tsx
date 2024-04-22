@@ -17,7 +17,7 @@ const Header = () => {
   ];
 
   return (
-    <nav className="backdrop-blur    w-full p-4 z-20  md:max-w-7xl md:mx-auto md:fixed top-0 left-[100px] border-b-[1px] md:p-6">
+    <nav className="backdrop-blur     w-full p-4   md:max-w-7xl md:mx-auto md:fixed top-0 left-[100px] border-b-[1px] md:p-6">
       <div className="flex items-center justify-between">
         <Link href={"/"} className={`${navBar && "z-10"}`}>
           <h4
