@@ -35,7 +35,7 @@ const Achievements = () => {
       <motion.div
         variants={variants}
         animate={controls}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ ease: "easeIn", duration: 1, delay: 1.5 }}
         className="w-full md:basis-2/5 mx-auto">
         <Image
           className="mx-auto md:hidden"
@@ -56,7 +56,7 @@ const Achievements = () => {
       <motion.div
         variants={variants}
         animate={controls}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ ease: "easeIn", duration: 1, delay: 1.5 }}
         className="w-full p-2 md:basis-3/5">
         <Card>
           <CardHeader>

@@ -60,7 +60,7 @@ const Experience = () => {
         variants={variants}
         initial="hidden"
         animate={controls}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ ease: "easeIn", duration: 1, delay: 0.5 }}
         className="w-full p-2 md:basis-3/5">
         <Card>
           <CardHeader>
