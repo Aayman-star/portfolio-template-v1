@@ -4,25 +4,39 @@ import img2 from "/public/images/badge.png";
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
 import { achievements } from "@/lib/content";
 import { poppins } from "@/lib/fonts";
-import Animation from "./Animation";
-import { useInView } from "react-intersection-observer";
-import { inView, motion } from "framer-motion";
+
+import { inView, motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 const Achievements = () => {
-  const [ref, inView] = useInView({ threshold: 0.5 });
+  /**This stuff is for animation */
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  const controls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      controls.start("show");
+      console.log("First div in view");
+    } else {
+      controls.start("hidden");
+    }
+  }, [isInView]);
+
+  const variants = {
+    hidden: { opacity: 0, scale: 0 },
+    show: { opacity: 1, scale: 1 },
+  };
   return (
-    <motion.div
+    <div
       ref={ref}
       id="Achievements"
-      className="w-full min-h-screen p-4 flex flex-col items-center gap-y-4 md:max-w-7xl mx-auto  md:flex-row md:items-center justify between"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        ease: "easeIn",
-        duration: 2,
-        delay: 1,
-      }}>
+      className="w-full min-h-screen p-4 flex flex-col items-center gap-y-4 md:max-w-7xl mx-auto  md:flex-row md:items-center justify between">
       {/* div for the image */}
-      <div className="w-full md:basis-2/5 mx-auto">
+      <motion.div
+        variants={variants}
+        animate={controls}
+        transition={{ duration: 1, delay: 1 }}
+        className="w-full md:basis-2/5 mx-auto">
         <Image
           className="mx-auto md:hidden"
           src={img2}
@@ -37,9 +51,13 @@ const Achievements = () => {
           width={300}
           height={300}
         />
-      </div>
+      </motion.div>
       {/* div for the text */}
-      <div className="w-full p-2 md:basis-3/5">
+      <motion.div
+        variants={variants}
+        animate={controls}
+        transition={{ duration: 1, delay: 1 }}
+        className="w-full p-2 md:basis-3/5">
         <Card>
           <CardHeader>
             {" "}
@@ -61,8 +79,8 @@ const Achievements = () => {
             ))}
           </CardContent>
         </Card>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 
