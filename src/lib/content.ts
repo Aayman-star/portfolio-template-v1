@@ -100,3 +100,7 @@ export const skills = [
     title: "Good communication skills",
   },
 ];
+export const contactLinks = [
+  { id: 1, email: "mailto:emailto:kanzakhalid.khalil@gmail.com" },
+  { id: 2, linkedin: "https://www.linkedin.com/in/dr-kanza-4689b0136" },
+];

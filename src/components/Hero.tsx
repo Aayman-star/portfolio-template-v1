@@ -5,9 +5,9 @@ import Image from "next/image";
 import dp from "/public/images/place-holder.jpg";
 import { poppins } from "@/lib/fonts";
 import { useTheme } from "next-themes";
-import { Title, Subtitle, AboutText } from "@/lib/content";
+import { Title, Subtitle, AboutText, contactLinks } from "@/lib/content";
 import { TypeAnimation } from "react-type-animation";
-import { motion, MotionConfig, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 const Hero = () => {
@@ -81,10 +81,20 @@ const Hero = () => {
         <div className="mt-2 flex items-center space-x-2 md:space-x-4 text-primary md:mt-6">
           <Button variant="secondary" className="text-primary">
             {" "}
-            <Linkedin className="hover:text-primary" />
+            <a
+              href={contactLinks[1].linkedin}
+              target="_blank"
+              rel="noopener noreferrer">
+              <Linkedin className="hover:text-primary" />
+            </a>
           </Button>
           <Button className="">
-            <Mail />
+            <a
+              href={contactLinks[0].email}
+              target="_blank"
+              rel="noopener noreferrer">
+              <Mail />
+            </a>
           </Button>
         </div>
       </motion.div>
