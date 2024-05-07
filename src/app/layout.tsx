@@ -7,8 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { inter } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "Dr.Kanza Khalid",
-  description: "Dr.Kanza Khalid Resume",
+  title: "Portfolio template",
+  description: "Portfolio template",
 };
 
 export default function RootLayout({
