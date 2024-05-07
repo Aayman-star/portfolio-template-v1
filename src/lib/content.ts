@@ -1,106 +1,106 @@
-export const Title = "Dr.Kanza Khalid";
-export const Subtitle = "FCPS Cardiology";
-export const AboutText = `Medical Professional dedicated to providing better care to my patients
-          and passionate about improving the health care facilities in Pakistan.`;
+export const Title = "Your Name";
+export const Subtitle = "Your Occupation";
+export const AboutText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`;
 export const experience = [
   {
-    institute: "PIC,Lahore",
-    position: "Post Graduate trainee",
-    duration: "2018-2022",
+    institute: "ABC ,city",
+    position: "XYZ",
+    duration: "20XX-20XX",
     description:
-      "Completed three years of training in FCPS Cardiology programme from the Punjab Institute of Cardiology Lahore.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
   },
 
   {
-    institute: "Sir Ganga Ram Hospital, Lahore",
-    position: "Post Graduate trainee",
-    duration: "2016-2018",
+    institute: "ABC,City",
+    position: "XYZ",
+    duration: "20XX-20XX",
     description:
-      "FCPS-II training in general medicine for two years(Group-B) from Sir Ganga Ram Hospital,Lahore,under the supervision of  Professor Dr.Tahira Murtaza Cheema",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
   },
   {
-    institute: "Sir Ganga Ram Hospital, Lahore ",
-    position: "House Officer",
-    duration: "2014-2015",
+    institute: "ABC,City",
+    position: "XYZ",
+    duration: "20XX-20XX",
     description:
-      "Completed house job in Sir Ganga Ram Hospital in Medicine, Dermatology, Gynaecology and Surgery.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
 ];
 
 export const qualification = [
   {
-    institute: "CPSP Pakistan",
-    degree: "FCPS-II (Cardiology)",
-    duration: "2023",
+    institute: "ABC,City",
+    degree: "XYZ",
+    duration: "20XX",
   },
 
   {
-    institute: "Royal Colleges of Physicians of the United Kingdom",
-    degree: "MRCP-II",
-    duration: "Sep-2019",
+    institute: "ABC,City",
+    degree: "XYZ",
+    duration: "20XX",
   },
   {
-    institute: "Royal Colleges of Physicians of the United Kingdom",
-    degree: "MRCP-I",
-    duration: "June-2019",
+    institute: "ABC,City",
+    degree: "XYZ",
+    duration: "20XX",
   },
   {
-    institute: "CPSP Pakistan",
-    degree: "IMM/TOACS(Medicine)",
-    duration: "Aug-Sep-2018",
+    institute: "ABC,City",
+    degree: "XYZ",
+    duration: "20XX",
   },
   {
-    institute: "CPSP Pakistan",
-    degree: "FCPS-I(Medicine & Allied)",
-    duration: "Nov-2015",
+    institute: "ABC",
+    degree: "XYZ",
+    duration: "20XX",
   },
   {
-    institute: "Fatima Jinnah Medical University Lahore",
-    degree: "MBBS",
-    duration: "2014",
+    institute: "ABC,City",
+    degree: "XYZ",
+    duration: "20XX",
   },
 ];
 
 export const achievements = [
   {
     id: 1,
-    title: "Distinction in the subject of Forensic Medicine and Toxicology.",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: 2,
-    title: "Distinction in the subject of Otorhinolaryngology(ENT).",
+    title: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 3,
     title:
-      "Secured Overall 4th Position in the final professional exam.Distinction in the subject of Forensic Medicine and Toxicology.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
     id: 4,
     title:
-      "Received Award of Appreciation in the research paper and poster presentation on “the attendance dilemma” in the 5th International Conference on Medical Education, 2013.",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   },
 ];
 
 export const skills = [
   {
     id: 1,
-    title: "Emergency Medicine",
+    title: "First Skill",
   },
   {
     id: 2,
-    title: "Trauma Management",
+    title: "Second Skill",
   },
   {
     id: 3,
-    title: "Ability to manage under pressure",
+    title: "Third Skil",
   },
   {
     id: 4,
-    title: "Good communication skills",
+    title: "Fourth Skill",
   },
 ];
 export const contactLinks = [
-  { id: 1, email: "mailto:emailto:kanzakhalid.khalil@gmail.com" },
-  { id: 2, linkedin: "https://www.linkedin.com/in/dr-kanza-4689b0136" },
+  { id: 1, email: "mailto:emailto:" },
+  { id: 2, linkedin: "https://www.linkedin.com/" },
 ];

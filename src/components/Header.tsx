@@ -24,7 +24,7 @@ const Header = () => {
             className={`text-3xl font-extrabold text-primary ${
               navBar && "z-10"
             }`}>
-            Kanza Khalid
+            Your Name
           </h4>
         </Link>
 
