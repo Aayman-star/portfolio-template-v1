@@ -35,7 +35,7 @@ const Skills = () => {
       <motion.div
         variants={variants}
         animate={controls}
-        transition={{ ease: "easeIn", duration: 1, delay: 0.75 }}
+        transition={{ ease: "easeIn", duration: 1, delay: 0.5 }}
         className="w-full  p-2 md:basis-3/5">
         <Card>
           <CardHeader>

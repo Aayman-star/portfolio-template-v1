@@ -35,7 +35,7 @@ const Achievements = () => {
       <motion.div
         variants={variants}
         animate={controls}
-        transition={{ ease: "easeIn", duration: 1, delay: 0.75 }}
+        transition={{ ease: "easeIn", duration: 1, delay: 0.5 }}
         className="w-full md:basis-2/5 mx-auto">
         <Image
           className="mx-auto md:hidden"
