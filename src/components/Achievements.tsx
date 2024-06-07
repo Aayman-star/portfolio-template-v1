@@ -32,7 +32,7 @@ const Achievements = () => {
       <div
         ref={ref}
         id="Achievements"
-        className="w-full h-auto md:min-h-screen p-4 flex flex-col items-center gap-y-4 md:max-w-7xl md:mx-auto  md:flex-row md:items-center justify between">
+        className="w-full h-auto md:min-h-screen p-4 md:p-0 md:px-12 flex flex-col items-center gap-y-4 md:max-w-7xl md:mx-auto  md:flex-row md:items-center justify between">
         {/* div for the image */}
         <motion.div
           variants={variants}
@@ -50,8 +50,8 @@ const Achievements = () => {
             className="mx-auto hidden md:block"
             src={img2}
             alt="Experience"
-            width={300}
-            height={300}
+            width={250}
+            height={250}
           />
         </motion.div>
         {/* div for the text */}

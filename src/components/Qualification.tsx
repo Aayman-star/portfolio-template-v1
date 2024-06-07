@@ -32,7 +32,7 @@ const Qualification = () => {
       <div
         ref={ref}
         id="Qualification"
-        className="w-full h-auto md:min-h-screen p-4 flex flex-col-reverse items-center gap-y-4 md:max-w-7xl mx-auto md:flex-row md:items-center justify between">
+        className="w-full h-auto md:min-h-screen p-4 md:p-0 md:px-12 flex flex-col-reverse items-center gap-y-4 md:max-w-7xl mx-auto md:flex-row md:items-center md:justify-center">
         {/* div for the text */}
         <motion.div
           variants={variants}
@@ -83,8 +83,8 @@ const Qualification = () => {
             className="mx-auto hidden md:block"
             src={img1}
             alt="Experience"
-            width={300}
-            height={300}
+            width={250}
+            height={250}
           />
         </motion.div>
       </div>

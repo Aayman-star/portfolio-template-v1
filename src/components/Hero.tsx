@@ -36,7 +36,7 @@ const Hero = () => {
       <div
         ref={ref}
         id="Home"
-        className={`w-full h-auto md:min-h-screen   flex flex-col items-center justify-center md:max-w-7xl mx-auto md:flex-row md:items-center md:justify-between`}>
+        className={`w-full py-[5.5rem] md:py-0 h-auto md:min-h-screen   flex flex-col items-center justify-center md:max-w-7xl mx-auto md:flex-row md:items-center md:justify-between`}>
         {/* This div is for image */}
 
         <motion.div
@@ -44,7 +44,7 @@ const Hero = () => {
           initial="hidden"
           animate={controls}
           transition={{ ease: "easeIn", duration: 1, delay: 0.5 }}
-          className="w-full p-4 md:p-0 basis-1/2  md:basis-1/2">
+          className="w-full  md:p-0 basis-1/2  md:basis-1/2">
           <Image
             className="mx-auto rounded-full shadow-2xl"
             src={dp}
@@ -63,14 +63,16 @@ const Hero = () => {
           <h1 className="font-bold text-[40px] md:text-6xl text-primary">
             {Title}
             <span
-              className={`font-normal text-xl block  ${
+              className={`font-normal text-xl block px-2 md:px-4 ${
                 theme == "dark" ? "text-gray-300" : "text-gray-700"
               } md:text-2xl`}>
               {Subtitle}
             </span>
           </h1>
           <p
-            className={`${poppins.className} mt-2 font-normal text-base ${
+            className={`${
+              poppins.className
+            } mt-2 px-2 md:px-4 font-normal text-base ${
               theme == "dark" ? "text-gray-300" : "text-gray-700"
             }`}>
             <TypeAnimation
@@ -80,7 +82,7 @@ const Hero = () => {
               cursor={false}
               repeat={0}></TypeAnimation>
           </p>
-          <div className="mt-2 flex items-center space-x-2 md:space-x-4 text-primary md:mt-6">
+          <div className="mt-2 px-2 md:px-4 flex items-center space-x-2 md:space-x-4 text-primary md:mt-6">
             <Button variant="secondary" className="text-primary">
               {" "}
               <a

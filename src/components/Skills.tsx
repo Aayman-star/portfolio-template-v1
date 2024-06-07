@@ -32,7 +32,7 @@ const Skills = () => {
       <div
         ref={ref}
         id="Skills"
-        className="w-full h-auto md:h-screen  flex flex-col items-center gap-y-6 mb-10  md:max-w-7xl mx-auto   md:flex-row-reverse md:items-center md:justify between md:mb-0">
+        className="w-full h-auto md:h-screen p-4 md:p-0 md:px-12  flex flex-col items-center gap-y-6 mb-10  md:max-w-7xl mx-auto   md:flex-row-reverse md:items-center md:justify between md:mb-0">
         <motion.div
           variants={variants}
           animate={controls}
@@ -49,8 +49,8 @@ const Skills = () => {
             className="hidden md:block md:mx-auto"
             src={img3}
             alt="Experience"
-            width={300}
-            height={300}
+            width={250}
+            height={250}
           />
         </motion.div>
         {/* div for the text */}
