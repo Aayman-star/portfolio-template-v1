@@ -32,7 +32,7 @@ const Qualification = () => {
       <div
         ref={ref}
         id="Qualification"
-        className="w-full h-auto md:min-h-screen p-4 md:p-0 md:px-12 flex flex-col-reverse items-center gap-y-4 md:max-w-7xl mx-auto md:flex-row md:items-center md:justify-center">
+        className="w-full h-auto md:min-h-screen p-4 md:p-0 md:px-[5rem] flex flex-col-reverse items-center gap-y-4 md:max-w-7xl mx-auto md:flex-row md:items-center md:justify-center">
         {/* div for the text */}
         <motion.div
           variants={variants}
